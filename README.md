@@ -1,3 +1,17 @@
+# Base React_Redux-act_Redux-Saga_MaterialUI App
+
+This base application aims to get best practices from react world. It has following components -
+
+- create-react-app
+- redux
+- react-redux
+- redux-act
+- redux-saga
+- redux-form
+- redux-devtool
+- @material-ui
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
