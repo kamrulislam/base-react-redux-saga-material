@@ -7,6 +7,8 @@ import monitorReducersEnhancer from './enhancers/monitorReducers';
 import loggerMiddleware from './middleware/logger';
 import rootReducer from './reducers/index';
 
+import rootSaga from './sagas'
+
 export default function configureStore(preloadedState) {
   const sagaMiddleware = createSagaMiddleware()
   const middlewares = [loggerMiddleware, sagaMiddleware];
@@ -17,6 +19,6 @@ export default function configureStore(preloadedState) {
   const composedEnhancers = composeWithDevTools(...enhancers);
 
   const store = createStore(rootReducer, preloadedState, composedEnhancers);
-
-  return store;
+  sagaMiddleware.run(rootSaga);
+  return store; 
 };
