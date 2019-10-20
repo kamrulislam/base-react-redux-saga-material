@@ -9,7 +9,7 @@ import rootReducer from './reducers/index';
 
 import rootSaga from './sagas'
 
-export default function configureStore(preloadedState) {
+function configureStore(preloadedState) {
   const sagaMiddleware = createSagaMiddleware()
   const middlewares = [loggerMiddleware, sagaMiddleware];
   const middlewareEnhancer = applyMiddleware(...middlewares);
@@ -22,3 +22,6 @@ export default function configureStore(preloadedState) {
   sagaMiddleware.run(rootSaga);
   return store; 
 };
+
+const store = configureStore();
+export default store;

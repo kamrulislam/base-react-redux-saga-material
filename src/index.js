@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import configureStore from './configureStore';
+// import configureStore from './configureStore';
+import store from './configureStore';
+// const action = type => store.dispatch({type})
 
-
-const store = configureStore();
+// const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
@@ -20,3 +21,4 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+// store.subscribe(render)
