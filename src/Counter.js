@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-const Counter = ({ value, onIncrement, onDecrement }) =>
+const Counter = ({ value, onIncrement, onDecrement, onIncrementAsync }) =>
     <div>
       <button onClick={onIncrement}>
         Increment
@@ -11,6 +11,10 @@ const Counter = ({ value, onIncrement, onDecrement }) =>
       {' '}
       <button onClick={onDecrement}>
         Decrement
+      </button>
+      {' '}
+      <button onClick={onIncrementAsync}>
+        Increment Async
       </button>
       <hr />
       <div>
