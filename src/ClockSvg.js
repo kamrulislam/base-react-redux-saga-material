@@ -72,19 +72,6 @@ const ClockSvg = () => {
         {
            hoursMark.map((hour, i)=> <line key={i} transform={'rotate(' + hour.deg + ')'} strokeWidth={hour.stroke} x1="15" y1="0" x2="16" y2="0" />) 
         }  
-        {/* <line transform="rotate(30)" x1="15" y1="0" x2="16" y2="0" />
-        <line transform="rotate(60)" x1="15" y1="0" x2="16" y2="0" />
-        <line transform="rotate(90)" stroke-width="0.5" x1="15" y1="0" x2="16" y2="0" />
-        <line transform="rotate(120)" x1="15" y1="0" x2="16" y2="0" />
-        <line transform="rotate(150)" x1="15" y1="0" x2="16" y2="0" />
-        <line transform="rotate(180)" stroke-width="0.5" x1="15" y1="0" x2="16" y2="0" />
-        <line transform="rotate(210)" x1="15" y1="0" x2="16" y2="0" />
-        <line transform="rotate(240)" x1="15" y1="0" x2="16" y2="0" />
-        <line transform="rotate(270)" stroke-width="0.5" x1="15" y1="0" x2="16" y2="0" />
-        <line transform="rotate(300)" x1="15" y1="0" x2="16" y2="0" />
-        <line transform="rotate(330)" x1="15" y1="0" x2="16" y2="0" />
-        <line transform="rotate(360)" stroke-width="0.5" x1="15" y1="0" x2="16" y2="0" /> */}
-        {/* <line transform="rotate(30)" x1="15" y1="0" x2="16" y2="0" /> */}
       </g>
       <line transform="translate(20, 20) rotate(330)" strokeWidth="1" x1="0" y1="0" x2="9" y2="0" className="hour-svg" />
       <line transform="translate(20, 20) rotate(270)" strokeWidth="0.6" x1="0" y1="0" x2="13" y2="0" className="minute-svg" />
