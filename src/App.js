@@ -3,7 +3,7 @@ import './App.css';
 
 import Counter from './Counter'
 import store from './configureStore';
-// import Clock from './Clock';
+import Clock from './Clock';
 import ClockSvg from './ClockSvg';
 
 const action = type => store.dispatch({type});
@@ -24,7 +24,7 @@ function App() {
         onIncrementAsync={() => action('INCREMENT_ASYNC')}
       />
       
-      {/* <Clock /> */}
+      <Clock />
       <ClockSvg />
     </div>
   );
