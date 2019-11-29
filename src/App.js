@@ -11,6 +11,7 @@ import Counter from './Counter';
 import store from './configureStore';
 import Clock from './Clock';
 import ClockSvg from './ClockSvg';
+import Quiz from './Quiz';
 
 const action = type => store.dispatch({type});
 
@@ -43,6 +44,7 @@ function App() {
               onDecrement={() => action('DECREMENT')}
               onIncrementAsync={() => action('INCREMENT_ASYNC')}
             />
+            <Quiz value={store.getState().quiz} onFetch={() => action('RECORDS/FETCH')}></Quiz>
           </Route>
           {/* <PrivateRoute path="/protected">
             <ProtectedPage />
