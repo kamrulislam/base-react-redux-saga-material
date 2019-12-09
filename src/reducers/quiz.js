@@ -1,16 +1,16 @@
-export default function quiz(state = { quizes: null, error: null }, action) {
+export default function quiz(state = { quizzes: null, error: null }, action) {
     switch (action.type) {
       case 'RECORDS/FETCH':
         return state
       case 'RECORDS/FETCH_SUCCESS':
         return {
             ...state,            
-            quizes: action.payload
+            quizzes: action.payload
         };
       case 'RECORDS/FETCH_FAILURE':
         return {
             ...state,
-            quizes: null,
+            quizzes: null,
             error: action.payload
         };
       default:
